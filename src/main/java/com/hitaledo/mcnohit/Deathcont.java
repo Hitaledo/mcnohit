@@ -26,22 +26,22 @@ public class Deathcont implements CommandExecutor{
             //Si se pasa un argumento
             if (args.length == 1){
                 //Si no existen los datos
-                if(!dataConfig.contains(args.toString())){
+                if(!dataConfig.contains(args[0])){
                     //Enviar mensaje
                     player.sendMessage("No se ha encontrado un jugador con ese nombre");
                 //De lo contrario
                 }else{
                     //Asignar variable kills segun el archivo
-                    kills = dataConfig.getInt(args.toString());
+                    kills = dataConfig.getInt(args[0]);
                     //Enviar mensaje
-                    player.sendMessage("El jugador " + args.toString() + " tiene " + kills + "muertes");
+                    player.sendMessage("El jugador " + args[0] + " tiene " + kills + " muertes");
                 }
             //De lo contrario
             }else{
                 //Asignar variable kills segun el archivo
                 kills = dataConfig.getInt(sender.getName());
                 //Enviar mensaje
-                player.sendMessage("El jugador " + sender + " tiene " + kills + "muertes");
+                player.sendMessage("El jugador " + sender.getName() + " tiene " + kills + " muertes");
             }
         //De lo contrario
         }else{
