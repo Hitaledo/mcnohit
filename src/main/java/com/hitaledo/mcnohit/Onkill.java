@@ -9,24 +9,27 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 //Clase publica Onkill implementa un Listener
 public class Onkill implements Listener{
+    //Clase principal
     private App plugin;
     public Onkill(App plugin){
         this.plugin = plugin;
     }
-    @EventHandler
     //Funcion onkill con el evento PlayerDeath
+    @EventHandler
     public void onkill(PlayerDeathEvent event){
+        //Variable kills
+        Integer kills = 0;
         //Configurar el archivo de datos
         File data = plugin.data;
         FileConfiguration dataConfig = plugin.dataConfig;
-        //Asignar variable kills segun el archivo
-        Integer kills = dataConfig.getInt(event.getEntity().getName());
         //Si no existen los datos
         if(!dataConfig.contains(event.getEntity().getName())){
             //Establece los datos en 1
             dataConfig.set(event.getEntity().getName(), 1);
         //De lo contrario
         }else{
+            //Asignar variable kills segun el archivo
+            kills = dataConfig.getInt(event.getEntity().getName());
             //Sumar uno a kills
             kills += 1;
             //Establece los datos en kills
