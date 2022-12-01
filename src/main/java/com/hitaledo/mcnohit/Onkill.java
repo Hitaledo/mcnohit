@@ -24,17 +24,17 @@ public class Onkill implements Listener{
         FileConfiguration dataConfig = plugin.dataConfig;
         //Si no existen los datos
         if(!dataConfig.contains(event.getEntity().getName())){
-            //Establece los datos en 1
-            dataConfig.set(event.getEntity().getName(), 1);
+            //Establece kills en 1
+            kills = 1;
         //De lo contrario
         }else{
             //Asignar variable kills segun el archivo
             kills = dataConfig.getInt(event.getEntity().getName());
             //Sumar uno a kills
             kills += 1;
-            //Establece los datos en kills
-            dataConfig.set(event.getEntity().getName(), kills);
         }
+        //Establece los datos en kills
+        dataConfig.set(event.getEntity().getName(), kills);
         //Tratar de
         try{
             //Guardar los datos
