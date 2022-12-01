@@ -31,10 +31,12 @@ public class App extends JavaPlugin {
             //Mensaje de error
             getLogger().info(ChatColor.RED + "Ocurrio un error al guardar los datos");
         }        
-        //Registrar evento Onhit
+        //Registrar Evento Onhit
         getServer().getPluginManager().registerEvents(new Onhit(), this);
         //Registrar Evento Onkill
         getServer().getPluginManager().registerEvents(new Onkill(this), this);
+        //Registrar Comando Deathcont
+        getCommand("deathcont").setExecutor(new Deathcont(this));
     }
     //Cuando se desactiva el plugin
     public void onDisable(){

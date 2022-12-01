@@ -49,7 +49,7 @@ public class Onkill implements Listener{
         //Establecer variable mensaje original
         String originalMessage = event.getDeathMessage();
         //Establecer variable mensaje añadido
-        String addedMessage = " Por " + kills + " vez";
+        String addedMessage = ". Total: " + kills;
         //Establecer variable nuevo mensaje
         String newMessage = originalMessage + addedMessage;
         //Establecer el mensaje de kill a nuevo mensaje
