@@ -12,10 +12,9 @@ public class App extends JavaPlugin {
     String pluginName = "Minecraft NO HIT";
     File data;
     FileConfiguration dataConfig;
+    File config;
     //Cuando se activa el plugin
     public void onEnable(){
-        //Mensaje de activacion
-        getLogger().info("Se ha activado el plugin " + pluginName + " correctamente!");
         //Registrar archivo de datos
         data = new File(getDataFolder(), "data.yml");
         //Cargar configuracion de datos
@@ -30,13 +29,24 @@ public class App extends JavaPlugin {
             e.printStackTrace();
             //Mensaje de error
             getLogger().info(ChatColor.RED + "Ocurrio un error al guardar los datos");
-        }        
+        }
+        //Registrar archivo de configuracion
+        config = new File(getDataFolder(), "config.yml");
+        //Si el archivo no existe
+        if (!config.exists()){
+            //Crear archivo
+            saveDefaultConfig();
+        }
         //Registrar Evento Onhit
         getServer().getPluginManager().registerEvents(new Onhit(this), this);
         //Registrar Evento Onkill
         getServer().getPluginManager().registerEvents(new Onkill(this), this);
         //Registrar Comando Deathcont
         getCommand("deathcont").setExecutor(new Deathcont(this));
+        //Registrar Comando Reload
+        getCommand("nohitreload").setExecutor(new Reload(this));
+        //Mensaje de activacion
+        getLogger().info("Se ha activado el plugin " + pluginName + " correctamente!");
     }
     //Cuando se desactiva el plugin
     public void onDisable(){
