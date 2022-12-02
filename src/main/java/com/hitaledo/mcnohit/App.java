@@ -44,7 +44,7 @@ public class App extends JavaPlugin {
         //Registrar Comando Deathcont
         getCommand("deathcont").setExecutor(new Deathcont(this));
         //Registrar Comando Reload
-        getCommand("nohitreload").setExecutor(new Reload(this));
+        getCommand("nohitreload").setExecutor(new Nohitreload(this));
         //Mensaje de activacion
         getLogger().info("Se ha activado el plugin " + pluginName + " correctamente!");
     }

@@ -5,10 +5,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
 //Clase publica Reload implementa CommandExecutor
-public class Reload implements CommandExecutor{
+public class Nohitreload implements CommandExecutor{
     //Clase principal
     private App plugin;
-    public Reload(App plugin){
+    public Nohitreload(App plugin){
         this.plugin = plugin;
     }
     //Booleano publico onCommand
