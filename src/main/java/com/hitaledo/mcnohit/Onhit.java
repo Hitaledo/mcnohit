@@ -1,11 +1,11 @@
 //Nombre del paquete
 package com.hitaledo.mcnohit;
+
 //Importar Librerias
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.Bukkit;
 //Clase publica Onhit implementa un Listener
 public class Onhit implements Listener{
@@ -18,17 +18,15 @@ public class Onhit implements Listener{
     @EventHandler
     public void onhit(EntityDamageEvent event){
         //Variables
-        long tHit = 2L;
-        BukkitScheduler scheduler = Bukkit.getScheduler();
+        Long tHit = 40L;
+        int killDamage = 100;
         //Si el tipo de entidad es un jugador
         if (event.getEntityType() == EntityType.PLAYER){
-            //Esperar
-            scheduler.runTaskLater(plugin, () -> {
-            //Establecer daño en 100
-            event.setDamage(100);
-            },
-            //delay
-            tHit);
+            //Delay
+            Bukkit.getScheduler().runTaskLater(plugin, () -> {
+                //Establecer daño en 100
+                event.setDamage(killDamage);
+            }, tHit);
         }
     }
 }
