@@ -32,7 +32,7 @@ public class App extends JavaPlugin {
             getLogger().info(ChatColor.RED + "Ocurrio un error al guardar los datos");
         }        
         //Registrar Evento Onhit
-        getServer().getPluginManager().registerEvents(new Onhit(), this);
+        getServer().getPluginManager().registerEvents(new Onhit(this), this);
         //Registrar Evento Onkill
         getServer().getPluginManager().registerEvents(new Onkill(this), this);
         //Registrar Comando Deathcont
