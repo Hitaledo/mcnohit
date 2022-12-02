@@ -4,3 +4,7 @@ version: 1.0
 commands:
   deathcont:
     description: Ver la cantidad de muertes de un jugador
+    permission: mcnohit.deathcont
+  nohitreload:
+    description: Recargar la configuracion del plugin
+    permission: mcnohit.nohitreload
