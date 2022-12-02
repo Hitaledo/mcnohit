@@ -7,11 +7,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 //Clase publica Onhit implementa un Listener
 public class Onhit implements Listener{
+    byte tHit=0.1;
     //Funcion onhit con el evento EntityDamage
     @EventHandler
     public void onhit(EntityDamageEvent event){
         //Si el tipo de entidad es un jugador
         if (event.getEntityType() == EntityType.PLAYER){
+            wait(tHit);
             //Establecer daño en 100
             event.setDamage(100);
         }
