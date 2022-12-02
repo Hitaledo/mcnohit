@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 //Clase publica Onhit implementa un Listener
 public class Onhit implements Listener{
-    float tHit=0.1;
+    double tHit=0.1;
     //Funcion onhit con el evento EntityDamage
     @EventHandler
     public void onhit(EntityDamageEvent event){
