@@ -41,10 +41,12 @@ public class App extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Onhit(this), this);
         //Registrar Evento Onkill
         getServer().getPluginManager().registerEvents(new Onkill(this), this);
-        //Registrar Comando Deathcont
-        getCommand("deathcont").setExecutor(new Deathcont(this));
+        //Registrar Comando Deathcount
+        getCommand("deathcount").setExecutor(new Deathcount(this));
         //Registrar Comando Reload
-        getCommand("nohitreload").setExecutor(new Nohitreload(this));
+        getCommand("nohitreload").setExecutor(new Reload(this));
+        //Registrar Comando Reset
+        getCommand("deathcountreset").setExecutor(new Reset(this));
         //Mensaje de activacion
         getLogger().info("Se ha activado el plugin " + pluginName + " correctamente!");
     }

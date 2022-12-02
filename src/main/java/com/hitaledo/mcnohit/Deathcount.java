@@ -7,10 +7,10 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.command.Command;
 //Clase publica Deathcont implementa CommandExecutor
-public class Deathcont implements CommandExecutor{
+public class Deathcount implements CommandExecutor{
     //Clase principal
     private App plugin;
-    public Deathcont(App plugin){
+    public Deathcount(App plugin){
         this.plugin = plugin;
     }
     //Booleano publico onCommand
