@@ -16,7 +16,7 @@ public class Reload implements CommandExecutor{
         //Recargar configuracion
         plugin.reloadConfig();
         //Mostrar mensaje
-        plugin.getLogger().info("Se ha recargado el plugin " + plugin.pluginName + " correctamente!");
+        sender.sendMessage("Se ha recargado el plugin " + plugin.pluginName + " correctamente!");
         //Devolver comando
         return true;
     }
