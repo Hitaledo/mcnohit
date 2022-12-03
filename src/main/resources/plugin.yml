@@ -2,9 +2,12 @@ main: com.hitaledo.mcnohit.App
 name: mcnohit
 version: 1.0
 commands:
-  deathcont:
+  deathcount:
     description: Ver la cantidad de muertes de un jugador
     permission: mcnohit.deathcont
   nohitreload:
     description: Recargar la configuracion del plugin
     permission: mcnohit.nohitreload
+  deathcountreset:
+    description: Resetear las kills de un jugador
+    permission: mcnohit.deathcountreset
