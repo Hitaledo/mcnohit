@@ -1,6 +1,7 @@
 main: com.hitaledo.mcnohit.App
 name: mcnohit
 version: 1.0
+api-version: 1.19
 commands:
   deathcount:
     description: Ver la cantidad de muertes de un jugador

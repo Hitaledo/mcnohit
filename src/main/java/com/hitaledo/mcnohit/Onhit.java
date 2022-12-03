@@ -18,7 +18,7 @@ public class Onhit implements Listener{
     public void onhit(EntityDamageEvent event){
         //Variables
         FileConfiguration config = plugin.getConfig();
-        int killDamage = config.getInt("kill-damage");
+        int killDamage = config.getInt("Config.kill-damage");
         //Si el tipo de entidad es un jugador
         if (event.getEntityType() == EntityType.PLAYER){
             //Establecer daño

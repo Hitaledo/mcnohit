@@ -24,17 +24,17 @@ public class App extends JavaPlugin {
             //Guardar los datos
             dataConfig.save(data);
         //En el caso de que no se pueda
-        }catch(Exception e){
+        }catch(Exception exeption){
             //Imprimir el error
-            e.printStackTrace();
+            exeption.printStackTrace();
             //Mensaje de error
-            getLogger().info(ChatColor.RED + "Ocurrio un error al guardar los datos");
+            getLogger().info(ChatColor.RED + "Ocurrio un error al crear el archivo de los datos");
         }
         //Registrar archivo de configuracion
         config = new File(getDataFolder(), "config.yml");
-        //Si el archivo no existe
+        //Si no existe el archivo de configuracion
         if (!config.exists()){
-            //Crear archivo
+            //Guardar configuracion por defecto
             saveDefaultConfig();
         }
         //Registrar Evento Onhit
@@ -48,11 +48,11 @@ public class App extends JavaPlugin {
         //Registrar Comando Reset
         getCommand("deathcountreset").setExecutor(new Reset(this));
         //Mensaje de activacion
-        getLogger().info("Se ha activado el plugin " + pluginName + " correctamente!");
+        getLogger().info(ChatColor.GREEN + "Se ha activado el plugin " + pluginName + " correctamente!");
     }
     //Cuando se desactiva el plugin
     public void onDisable(){
         //Mensaje de desactivacion
-        getLogger().info("Se ha desactivado el plugin " + pluginName + " correctamente!");
+        getLogger().info(ChatColor.GREEN + "Se ha desactivado el plugin " + pluginName + " correctamente!");
     }
 }
