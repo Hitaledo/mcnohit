@@ -41,7 +41,7 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>Hitaledo/mcnohit</id>
+      <id>mcnohit</id>
       <url>https://github.com/Hitaledo/mcnohit/</url>
     </repository>
   </distributionManagement>
