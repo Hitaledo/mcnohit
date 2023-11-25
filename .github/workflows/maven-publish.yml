@@ -1,8 +1,9 @@
-name: McNoHit Package
+name: mcnohit
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
