@@ -39,4 +39,10 @@
       </resource>
     </resources>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>Hitaledo/mcnohit</id>
+      <url>https://github.com/Hitaledo/mcnohit/</url>
+    </repository>
+  </distributionManagement>
 </project>
